@@ -1,6 +1,8 @@
-[gd_scene load_steps=8 format=3 uid="uid://by7i3nbf55ir"]
+[gd_scene load_steps=10 format=3 uid="uid://by7i3nbf55ir"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_euhvm"]
+[ext_resource type="AudioStream" uid="uid://lo33y4qep0w8" path="res://Jack Black Fuck you Sound effect [ ezmp3.cc ].mp3" id="2_hesc4"]
+[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://Great Cat's Village R (Neco Arc Theme).mp3" id="2_u3oyg"]
 [ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="3_230ix"]
 [ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://Neco-clicker.png" id="4_v67en"]
 [ext_resource type="Texture2D" uid="uid://cpytysi15l8jk" path="res://Neco-Arc-PNG-Clipart.png" id="5_7dn54"]
@@ -55,8 +57,13 @@ text = "Close
 "
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0
+stream = ExtResource("2_u3oyg")
+volume_db = -20.0
 autoplay = true
+
+[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_hesc4")
+volume_db = 24.0
 
 [node name="background" type="Sprite2D" parent="."]
 show_behind_parent = true
@@ -86,7 +93,7 @@ position = Vector2(741, 304)
 sprite_frames = ExtResource("8_m8gu4")
 animation = &"gif"
 autoplay = "gif"
-frame_progress = 0.270394
+frame_progress = 0.563165
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

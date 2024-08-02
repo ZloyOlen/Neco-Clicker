@@ -1,9 +1,11 @@
-[gd_scene load_steps=9 format=3 uid="uid://djcyhjnjtqiyy"]
+[gd_scene load_steps=12 format=3 uid="uid://djcyhjnjtqiyy"]
 
 [ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="1_2ra43"]
 [ext_resource type="Script" path="res://main.gd" id="1_m3k3h"]
 [ext_resource type="Texture2D" uid="uid://unyjg0a6ljww" path="res://Neco-Arc_Remake.png" id="2_miomt"]
 [ext_resource type="AudioStream" uid="uid://ox7gsa6cbsnl" path="res://neco-arc-sound-effect.mp3" id="4_bi544"]
+[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://Great Cat's Village R (Neco Arc Theme).mp3" id="4_xow3p"]
+[ext_resource type="AudioStream" uid="uid://8lobe184yxtl" path="res://jhin 4.mp3" id="6_mqvpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7qd"]
 size = Vector2(500, 900)
@@ -17,6 +19,10 @@ font_size = 100
 font_color = Color(0, 0, 0, 1)
 
 [sub_resource type="LabelSettings" id="LabelSettings_udpgm"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_3cn85"]
 font_size = 50
 font_color = Color(0, 0, 0, 1)
 
@@ -57,16 +63,25 @@ offset_bottom = 1101.0
 text = "ESC to exit"
 label_settings = SubResource("LabelSettings_vlwxb")
 
-[node name="Label3" type="Label" parent="."]
+[node name="ClickCounter" type="Label" parent="."]
 offset_left = 48.0
 offset_top = 480.0
-offset_right = 1228.0
-offset_bottom = 617.0
+offset_right = 640.0
+offset_bottom = 549.0
 text = "Times clicked on Neco: 0"
 label_settings = SubResource("LabelSettings_udpgm")
 
+[node name="CoinCounter" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 550.0
+offset_right = 237.0
+offset_bottom = 619.0
+text = "Coins: 0"
+label_settings = SubResource("LabelSettings_3cn85")
+
 [node name="bgm" type="AudioStreamPlayer" parent="."]
-volume_db = -10.0
+stream = ExtResource("4_xow3p")
+volume_db = -20.0
 autoplay = true
 
 [node name="neco" type="Node" parent="."]
@@ -74,5 +89,9 @@ autoplay = true
 [node name="arc" type="AudioStreamPlayer" parent="neco"]
 stream = ExtResource("4_bi544")
 autoplay = true
+
+[node name="jhin" type="AudioStreamPlayer" parent="neco"]
+stream = ExtResource("6_mqvpu")
+volume_db = 24.0
 
 [connection signal="input_event" from="Node2D/Area2D" to="." method="_on_area_2d_input_event"]

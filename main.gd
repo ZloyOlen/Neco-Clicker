@@ -1,18 +1,22 @@
 extends Node2D
 
+var coin_prog = 0
+
 var sound = {
 sound1 = load("res://neco-arc-sound-effect.mp3"),
 sound2 = load("res://neco-arc-dori.mp3"),
 sound3 = load("res://necoarc-mmmm.mp3"),
 sound4 = load("res://necoarc-nyeh.mp3")
 }
+
 @onready var a = $neco/arc
 @onready var players = [a]
-#@onready var clicks = Save.data["clicks"]
+
 
 func _ready():
-	$Label3.text = "Times clicked on Neco: " + str(Save.data["clicks"])
-	print(Save.data["clicks"])
+	$ClickCounter.text = "Times clicked on Neco: " + str(Save.data["clicks"])
+	$CoinCounter.text = "Coins: " + str(Save.data["coins"])
+	#print(Save.data["clicks"])
 
 func _on_area_2d_input_event(_viewport, event, _shape_idx):
 	if event.is_action_pressed("click"):
@@ -30,8 +34,17 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 					players.append(arc)
 					arc.play()
 		Save.data["clicks"] = int(Save.data["clicks"]) + 1
-		$Label3.text = "Times clicked on Neco: " + str(Save.data["clicks"])
-#neco arc is hot
+		coin_prog += 1
+		if int(Save.data["clicks"]) == 444 or int(Save.data["clicks"]) == 4444:
+			$neco/jhin.play()
+		if coin_prog == int(Save.data["clicks_per_coin"]):
+			coin_prog = 0
+			Save.data["coins"] = int(Save.data["coins"]) + 1
+			$CoinCounter.text = "Coins: " + str(Save.data["coins"])
+		$ClickCounter.text = "Times clicked on Neco: " + str(Save.data["clicks"])
+		Save.dsave()
+
+
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
 		Save.dsave()

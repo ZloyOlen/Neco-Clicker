@@ -15,4 +15,4 @@ func _on_close_pressed():
 
 
 func _on_options_pressed():
-	pass # Replace with function body.
+	$AudioStreamPlayer2.play()

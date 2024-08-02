@@ -3,12 +3,12 @@ extends Node
 var FILE_NAME = "user://save.json"
 
 var data = {
-	clicks = "0",
-	coins = "0",
-	clicks_per_coin = "10",
-	auto_clicks = "0",
-	theme = "neco",
-	skin = "necoarc",
+	"clicks" = "0",
+	"coins" = "0",
+	"clicks_per_coin" = "10",
+	"auto_clicks" = "0",
+	"theme" = "neco",
+	"skin" = "necoarc",
 	"jelly" = "false",
 	"boy" = "false",
 	"chaos" = "false",
