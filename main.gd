@@ -31,7 +31,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 					arc.play()
 		Save.data["clicks"] = int(Save.data["clicks"]) + 1
 		$Label3.text = "Times clicked on Neco: " + str(Save.data["clicks"])
-
+#neco arc is hot
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
 		Save.dsave()
