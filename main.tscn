@@ -1,0 +1,78 @@
+[gd_scene load_steps=9 format=3 uid="uid://djcyhjnjtqiyy"]
+
+[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="1_2ra43"]
+[ext_resource type="Script" path="res://main.gd" id="1_m3k3h"]
+[ext_resource type="Texture2D" uid="uid://unyjg0a6ljww" path="res://Neco-Arc_Remake.png" id="2_miomt"]
+[ext_resource type="AudioStream" uid="uid://ox7gsa6cbsnl" path="res://neco-arc-sound-effect.mp3" id="4_bi544"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7qd"]
+size = Vector2(500, 900)
+
+[sub_resource type="LabelSettings" id="LabelSettings_8n2o8"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_vlwxb"]
+font_size = 100
+font_color = Color(0, 0, 0, 1)
+
+[sub_resource type="LabelSettings" id="LabelSettings_udpgm"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_m3k3h")
+
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -1
+position = Vector2(960, 540)
+texture = ExtResource("1_2ra43")
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2(950, 542)
+
+[node name="Neco-Arc" type="Sprite2D" parent="Node2D"]
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("2_miomt")
+
+[node name="Area2D" type="Area2D" parent="Node2D"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Node2D/Area2D"]
+shape = SubResource("RectangleShape2D_cc7qd")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 548.0
+offset_right = 1423.0
+offset_bottom = 137.0
+theme_override_font_sizes/font_size = 100
+text = "CLICK THE NECO!!!"
+label_settings = SubResource("LabelSettings_8n2o8")
+
+[node name="Label2" type="Label" parent="."]
+offset_left = 700.0
+offset_top = 964.0
+offset_right = 1206.0
+offset_bottom = 1101.0
+text = "ESC to exit"
+label_settings = SubResource("LabelSettings_vlwxb")
+
+[node name="Label3" type="Label" parent="."]
+offset_left = 48.0
+offset_top = 480.0
+offset_right = 1228.0
+offset_bottom = 617.0
+text = "Times clicked on Neco: 0"
+label_settings = SubResource("LabelSettings_udpgm")
+
+[node name="bgm" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+autoplay = true
+
+[node name="neco" type="Node" parent="."]
+
+[node name="arc" type="AudioStreamPlayer" parent="neco"]
+stream = ExtResource("4_bi544")
+autoplay = true
+
+[connection signal="input_event" from="Node2D/Area2D" to="." method="_on_area_2d_input_event"]

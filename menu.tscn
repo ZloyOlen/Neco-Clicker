@@ -1,0 +1,93 @@
+[gd_scene load_steps=8 format=3 uid="uid://by7i3nbf55ir"]
+
+[ext_resource type="Script" path="res://menu.gd" id="1_euhvm"]
+[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="3_230ix"]
+[ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://Neco-clicker.png" id="4_v67en"]
+[ext_resource type="Texture2D" uid="uid://cpytysi15l8jk" path="res://Neco-Arc-PNG-Clipart.png" id="5_7dn54"]
+[ext_resource type="Texture2D" uid="uid://c37cjpxrrafbh" path="res://Neco-Arc-PNG-Pic.png" id="6_oc6fc"]
+[ext_resource type="Texture2D" uid="uid://c6avekypf3a1p" path="res://Neco-Arc.png" id="7_lslil"]
+[ext_resource type="SpriteFrames" uid="uid://dm7iv6wthurvs" path="res://Neco-Arc-PNG-Cutout.gif" id="8_m8gu4"]
+
+[node name="Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_euhvm")
+
+[node name="MarginContainer" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -300.0
+offset_top = 100.0
+offset_right = 300.0
+offset_bottom = 400.0
+grow_horizontal = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 70
+alignment = 2
+
+[node name="Start" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Start"
+
+[node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Options"
+
+[node name="Close" type="Button" parent="MarginContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_font_sizes/font_size = 50
+text = "Close
+"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+volume_db = -10.0
+autoplay = true
+
+[node name="background" type="Sprite2D" parent="."]
+show_behind_parent = true
+z_index = -1
+texture = ExtResource("3_230ix")
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(0, -300)
+scale = Vector2(1.2, 1.2)
+texture = ExtResource("4_v67en")
+
+[node name="Ceiling Neco" type="Sprite2D" parent="."]
+position = Vector2(780, -315)
+rotation = 3.14159
+texture = ExtResource("5_7dn54")
+
+[node name="Neco Santa" type="Sprite2D" parent="."]
+position = Vector2(-749, -304)
+texture = ExtResource("6_oc6fc")
+
+[node name="Sexy Neco" type="Sprite2D" parent="."]
+position = Vector2(-704, 285)
+texture = ExtResource("7_lslil")
+
+[node name="Running Neco" type="AnimatedSprite2D" parent="."]
+position = Vector2(741, 304)
+sprite_frames = ExtResource("8_m8gu4")
+animation = &"gif"
+autoplay = "gif"
+frame_progress = 0.270394
+
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="MarginContainer/VBoxContainer/Close" to="." method="_on_close_pressed"]
