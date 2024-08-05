@@ -45,7 +45,6 @@ text = "Start"
 
 [node name="Options" type="Button" parent="MarginContainer/VBoxContainer"]
 layout_mode = 2
-size_flags_vertical = 3
 theme_override_font_sizes/font_size = 50
 text = "Options"
 
@@ -58,8 +57,8 @@ text = "Close
 
 [node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_u3oyg")
-volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("2_hesc4")

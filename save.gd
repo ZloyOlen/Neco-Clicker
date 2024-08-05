@@ -14,6 +14,7 @@ var data = {
 	"chaos" = "false",
 }
 
+var first_load = true
 
 
 func dsave():

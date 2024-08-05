@@ -1,0 +1,56 @@
+[gd_scene load_steps=3 format=3 uid="uid://xt2rq3jeasq5"]
+
+[ext_resource type="Script" path="res://reset_confirmation.gd" id="1_vkxax"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_w0p40"]
+font_size = 50
+font_color = Color(0, 0, 0, 1)
+
+[node name="reset_confirmation" type="Control"]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_vkxax")
+
+[node name="Dialogue" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -258.0
+offset_top = -94.0
+offset_right = 258.0
+offset_bottom = 94.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Dialogue"]
+layout_mode = 2
+text = "Are You Sure?
+This can't be undone."
+label_settings = SubResource("LabelSettings_w0p40")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Dialogue"]
+layout_mode = 2
+
+[node name="Yes" type="Button" parent="Dialogue/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "Yes"
+
+[node name="No" type="Button" parent="Dialogue/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_font_sizes/font_size = 25
+text = "No"
+
+[connection signal="pressed" from="Dialogue/HBoxContainer/Yes" to="." method="_on_yes_pressed"]
+[connection signal="pressed" from="Dialogue/HBoxContainer/No" to="." method="_on_no_pressed"]

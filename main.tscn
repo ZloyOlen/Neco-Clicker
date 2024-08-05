@@ -81,17 +81,19 @@ label_settings = SubResource("LabelSettings_3cn85")
 
 [node name="bgm" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_xow3p")
-volume_db = -20.0
 autoplay = true
+bus = &"Music"
 
 [node name="neco" type="Node" parent="."]
 
 [node name="arc" type="AudioStreamPlayer" parent="neco"]
 stream = ExtResource("4_bi544")
 autoplay = true
+bus = &"SFX"
 
 [node name="jhin" type="AudioStreamPlayer" parent="neco"]
 stream = ExtResource("6_mqvpu")
 volume_db = 24.0
+bus = &"SFX"
 
 [connection signal="input_event" from="Node2D/Area2D" to="." method="_on_area_2d_input_event"]

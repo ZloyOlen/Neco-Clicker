@@ -1,5 +1,6 @@
 extends Node2D
 
+
 var coin_prog = 0
 
 var sound = {
@@ -12,6 +13,7 @@ sound4 = load("res://necoarc-nyeh.mp3")
 @onready var a = $neco/arc
 @onready var players = [a]
 
+@onready var menu : PackedScene = preload("res://menu.tscn")
 
 func _ready():
 	$ClickCounter.text = "Times clicked on Neco: " + str(Save.data["clicks"])
@@ -30,6 +32,7 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 				elif player == players.size()-1:
 					var arc = AudioStreamPlayer.new()
 					arc.stream = sound.values().pick_random()
+					arc.bus = "SFX"
 					$neco.add_child(arc)
 					players.append(arc)
 					arc.play()
@@ -48,4 +51,4 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
 		Save.dsave()
-		get_tree().quit()
+		get_tree().change_scene_to_file("res://menu.tscn")

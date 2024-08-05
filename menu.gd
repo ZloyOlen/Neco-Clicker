@@ -1,9 +1,10 @@
 extends Control
 
-#@onready var save = "res://save.gd"
 
 func _ready():
-	Save.dload()
+	if Save.first_load == true:
+		Save.dload()
+		Save.first_load = false
 	#print(Save.data["clicks"])
 
 func _on_start_pressed():
@@ -15,4 +16,4 @@ func _on_close_pressed():
 
 
 func _on_options_pressed():
-	$AudioStreamPlayer2.play()
+	get_tree().change_scene_to_file("res://options.tscn")
