@@ -1,9 +1,8 @@
-[gd_scene load_steps=6 format=3 uid="uid://b5trk3h4y0n6j"]
+[gd_scene load_steps=5 format=3 uid="uid://b5trk3h4y0n6j"]
 
 [ext_resource type="Script" path="res://options.gd" id="1_3qplg"]
-[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="1_hiu6h"]
+[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://common/White Background.jpg" id="1_hiu6h"]
 [ext_resource type="PackedScene" uid="uid://6indkp60ry2" path="res://volume_slider.tscn" id="2_3xcqs"]
-[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://Great Cat's Village R (Neco Arc Theme).mp3" id="3_bm46k"]
 
 [sub_resource type="LabelSettings" id="LabelSettings_w0p40"]
 font_size = 50
@@ -58,11 +57,6 @@ label_settings = SubResource("LabelSettings_w0p40")
 [node name="Music" parent="Volume Sliders" instance=ExtResource("2_3xcqs")]
 layout_mode = 2
 bus_name = "Music"
-
-[node name="bgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3_bm46k")
-autoplay = true
-bus = &"Music"
 
 [node name="Back" type="Button" parent="."]
 layout_mode = 0

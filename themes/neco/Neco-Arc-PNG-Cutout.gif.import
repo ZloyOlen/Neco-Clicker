@@ -1,0 +1,15 @@
+[remap]
+
+importer="import_gif_to_sprite_frames"
+type="SpriteFrames"
+uid="uid://dm7iv6wthurvs"
+path="res://.godot/imported/Neco-Arc-PNG-Cutout.gif-c1aee319e8c4e00aab7c3d46319d361a.tres"
+
+[deps]
+
+source_file="res://themes/neco/Neco-Arc-PNG-Cutout.gif"
+dest_files=["res://.godot/imported/Neco-Arc-PNG-Cutout.gif-c1aee319e8c4e00aab7c3d46319d361a.tres"]
+
+[params]
+
+frames_per_second=30

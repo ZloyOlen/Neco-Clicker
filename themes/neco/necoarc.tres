@@ -1,0 +1,26 @@
+[gd_resource type="Resource" script_class="GameTheme" load_steps=13 format=3 uid="uid://4ydxvfdp37ti"]
+
+[ext_resource type="SpriteFrames" uid="uid://dm7iv6wthurvs" path="res://themes/neco/Neco-Arc-PNG-Cutout.gif" id="1_kv5go"]
+[ext_resource type="Script" path="res://gametheme.gd" id="1_mbath"]
+[ext_resource type="Texture2D" uid="uid://unyjg0a6ljww" path="res://themes/neco/Neco-Arc_Remake.png" id="2_7i7cm"]
+[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://themes/neco/Great Cat's Village R (Neco Arc Theme).mp3" id="3_7peeu"]
+[ext_resource type="AudioStream" uid="uid://d0elrrorcsv22" path="res://themes/neco/neco-arc-dori.mp3" id="5_yk0kb"]
+[ext_resource type="AudioStream" uid="uid://ox7gsa6cbsnl" path="res://themes/neco/neco-arc-sound-effect.mp3" id="6_ngmsg"]
+[ext_resource type="AudioStream" uid="uid://cor8hk4phnwue" path="res://themes/neco/necoarc-mmmm.mp3" id="7_p4uf6"]
+[ext_resource type="AudioStream" uid="uid://dnmwm63m2335s" path="res://themes/neco/necoarc-nyeh.mp3" id="8_5n80b"]
+[ext_resource type="Texture2D" uid="uid://c37cjpxrrafbh" path="res://themes/neco/Neco-Arc-PNG-Pic.png" id="9_irywg"]
+[ext_resource type="Texture2D" uid="uid://cpytysi15l8jk" path="res://themes/neco/Neco-Arc-PNG-Clipart.png" id="10_aqr4o"]
+[ext_resource type="Texture2D" uid="uid://c6avekypf3a1p" path="res://themes/neco/Neco-Arc.png" id="11_50r4d"]
+[ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://themes/neco/Neco-clicker.png" id="12_uqaud"]
+
+[resource]
+script = ExtResource("1_mbath")
+title = ExtResource("12_uqaud")
+sprite1 = ExtResource("9_irywg")
+sprite2 = ExtResource("10_aqr4o")
+sprite3 = ExtResource("11_50r4d")
+mainsprite = ExtResource("2_7i7cm")
+gif = ExtResource("1_kv5go")
+music = ExtResource("3_7peeu")
+sounds = Array[AudioStream]([ExtResource("5_yk0kb"), ExtResource("6_ngmsg"), ExtResource("7_p4uf6"), ExtResource("8_5n80b")])
+text = "neco"

@@ -1,0 +1,22 @@
+[gd_resource type="Resource" script_class="GameTheme" load_steps=9 format=3 uid="uid://cn653oqmjxa7"]
+
+[ext_resource type="Script" path="res://gametheme.gd" id="1_aewrm"]
+[ext_resource type="SpriteFrames" uid="uid://c22wryalsi5gp" path="res://themes/jelly/JG2.gif" id="1_t4q73"]
+[ext_resource type="Texture2D" uid="uid://dvdxyu2epbeyc" path="res://themes/jelly/jellymon.png" id="2_pko5i"]
+[ext_resource type="AudioStream" uid="uid://r43hwx0r2gp" path="res://themes/jelly/First Riders [ ezmp3.cc ].mp3" id="3_40sbh"]
+[ext_resource type="Texture2D" uid="uid://hp7drmudh4vi" path="res://themes/jelly/Jellymon_2021_chocolatesticker.jpg" id="5_aq2p0"]
+[ext_resource type="Texture2D" uid="uid://bwwavm54hxrdc" path="res://themes/jelly/Jellymon_2-removebg-preview.png" id="6_j6aei"]
+[ext_resource type="Texture2D" uid="uid://clj5ofcaegldb" path="res://themes/jelly/Jellymon3.png" id="7_onl34"]
+[ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://themes/neco/Neco-clicker.png" id="8_ti0v3"]
+
+[resource]
+script = ExtResource("1_aewrm")
+title = ExtResource("8_ti0v3")
+sprite1 = ExtResource("5_aq2p0")
+sprite2 = ExtResource("6_j6aei")
+sprite3 = ExtResource("7_onl34")
+mainsprite = ExtResource("2_pko5i")
+gif = ExtResource("1_t4q73")
+music = ExtResource("3_40sbh")
+sounds = Array[AudioStream]([])
+text = "jelly"

@@ -4,10 +4,10 @@ extends Node2D
 var coin_prog = 0
 
 var sound = {
-sound1 = load("res://neco-arc-sound-effect.mp3"),
-sound2 = load("res://neco-arc-dori.mp3"),
-sound3 = load("res://necoarc-mmmm.mp3"),
-sound4 = load("res://necoarc-nyeh.mp3")
+sound1 = load("res://themes/neco/neco-arc-sound-effect.mp3"),
+sound2 = load("res://themes/neco/neco-arc-dori.mp3"),
+sound3 = load("res://themes/neco/necoarc-mmmm.mp3"),
+sound4 = load("res://themes/neco/necoarc-nyeh.mp3")
 }
 
 @onready var a = $neco/arc
@@ -51,4 +51,5 @@ func _on_area_2d_input_event(_viewport, event, _shape_idx):
 func _process(_delta):
 	if Input.is_action_just_pressed("exit"):
 		Save.dsave()
+		themes.set_theme(load("res://themes/jelly/jellymon.tres"))
 		get_tree().change_scene_to_file("res://menu.tscn")

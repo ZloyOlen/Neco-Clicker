@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ihieadbnh6qh"
+path="res://.godot/imported/Great Cat's Village R (Neco Arc Theme).mp3-f3181c863d71bb3f32455fd92e69cc4e.mp3str"
+
+[deps]
+
+source_file="res://themes/neco/Great Cat's Village R (Neco Arc Theme).mp3"
+dest_files=["res://.godot/imported/Great Cat's Village R (Neco Arc Theme).mp3-f3181c863d71bb3f32455fd92e69cc4e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

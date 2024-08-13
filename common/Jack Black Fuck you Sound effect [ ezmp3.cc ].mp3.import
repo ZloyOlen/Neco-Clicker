@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://lo33y4qep0w8"
+path="res://.godot/imported/Jack Black Fuck you Sound effect [ ezmp3.cc ].mp3-cd7bd03d384545addf227834eccdf760.mp3str"
+
+[deps]
+
+source_file="res://common/Jack Black Fuck you Sound effect [ ezmp3.cc ].mp3"
+dest_files=["res://.godot/imported/Jack Black Fuck you Sound effect [ ezmp3.cc ].mp3-cd7bd03d384545addf227834eccdf760.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

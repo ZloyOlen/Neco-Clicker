@@ -1,14 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://by7i3nbf55ir"]
+[gd_scene load_steps=8 format=3 uid="uid://by7i3nbf55ir"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_euhvm"]
-[ext_resource type="AudioStream" uid="uid://lo33y4qep0w8" path="res://Jack Black Fuck you Sound effect [ ezmp3.cc ].mp3" id="2_hesc4"]
-[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://Great Cat's Village R (Neco Arc Theme).mp3" id="2_u3oyg"]
-[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="3_230ix"]
-[ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://Neco-clicker.png" id="4_v67en"]
-[ext_resource type="Texture2D" uid="uid://cpytysi15l8jk" path="res://Neco-Arc-PNG-Clipart.png" id="5_7dn54"]
-[ext_resource type="Texture2D" uid="uid://c37cjpxrrafbh" path="res://Neco-Arc-PNG-Pic.png" id="6_oc6fc"]
-[ext_resource type="Texture2D" uid="uid://c6avekypf3a1p" path="res://Neco-Arc.png" id="7_lslil"]
-[ext_resource type="SpriteFrames" uid="uid://dm7iv6wthurvs" path="res://Neco-Arc-PNG-Cutout.gif" id="8_m8gu4"]
+[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://common/White Background.jpg" id="3_e25c6"]
+[ext_resource type="Texture2D" uid="uid://cbb57htfrfjdb" path="res://themes/neco/Neco-clicker.png" id="4_v67en"]
+[ext_resource type="Texture2D" uid="uid://cpytysi15l8jk" path="res://themes/neco/Neco-Arc-PNG-Clipart.png" id="5_7dn54"]
+[ext_resource type="Texture2D" uid="uid://c37cjpxrrafbh" path="res://themes/neco/Neco-Arc-PNG-Pic.png" id="6_oc6fc"]
+[ext_resource type="Texture2D" uid="uid://c6avekypf3a1p" path="res://themes/neco/Neco-Arc.png" id="7_lslil"]
+[ext_resource type="SpriteFrames" uid="uid://dm7iv6wthurvs" path="res://themes/neco/Neco-Arc-PNG-Cutout.gif" id="8_m8gu4"]
 
 [node name="Menu" type="Control"]
 layout_mode = 3
@@ -55,33 +53,24 @@ theme_override_font_sizes/font_size = 50
 text = "Close
 "
 
-[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_u3oyg")
-autoplay = true
-bus = &"Music"
-
-[node name="AudioStreamPlayer2" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("2_hesc4")
-volume_db = 24.0
-
 [node name="background" type="Sprite2D" parent="."]
 show_behind_parent = true
 z_index = -1
-texture = ExtResource("3_230ix")
+texture = ExtResource("3_e25c6")
 
 [node name="Title" type="Sprite2D" parent="."]
 position = Vector2(0, -300)
 scale = Vector2(1.2, 1.2)
 texture = ExtResource("4_v67en")
 
+[node name="Neco Santa" type="Sprite2D" parent="."]
+position = Vector2(-749, -304)
+texture = ExtResource("6_oc6fc")
+
 [node name="Ceiling Neco" type="Sprite2D" parent="."]
 position = Vector2(780, -315)
 rotation = 3.14159
 texture = ExtResource("5_7dn54")
-
-[node name="Neco Santa" type="Sprite2D" parent="."]
-position = Vector2(-749, -304)
-texture = ExtResource("6_oc6fc")
 
 [node name="Sexy Neco" type="Sprite2D" parent="."]
 position = Vector2(-704, 285)
@@ -92,7 +81,6 @@ position = Vector2(741, 304)
 sprite_frames = ExtResource("8_m8gu4")
 animation = &"gif"
 autoplay = "gif"
-frame_progress = 0.563165
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/Options" to="." method="_on_options_pressed"]

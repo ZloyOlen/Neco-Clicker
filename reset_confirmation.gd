@@ -6,10 +6,8 @@ var data_default = {
 	"clicks_per_coin" = "10",
 	"auto_clicks" = "0",
 	"theme" = "neco",
-	"skin" = "necoarc",
 	"jelly" = "false",
 	"boy" = "false",
-	"chaos" = "false",
 }
 
 

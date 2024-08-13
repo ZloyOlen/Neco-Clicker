@@ -1,11 +1,10 @@
-[gd_scene load_steps=12 format=3 uid="uid://djcyhjnjtqiyy"]
+[gd_scene load_steps=11 format=3 uid="uid://djcyhjnjtqiyy"]
 
-[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://White Background.jpg" id="1_2ra43"]
+[ext_resource type="Texture2D" uid="uid://ophkukghvu7g" path="res://common/White Background.jpg" id="1_2ra43"]
 [ext_resource type="Script" path="res://main.gd" id="1_m3k3h"]
-[ext_resource type="Texture2D" uid="uid://unyjg0a6ljww" path="res://Neco-Arc_Remake.png" id="2_miomt"]
-[ext_resource type="AudioStream" uid="uid://ox7gsa6cbsnl" path="res://neco-arc-sound-effect.mp3" id="4_bi544"]
-[ext_resource type="AudioStream" uid="uid://ihieadbnh6qh" path="res://Great Cat's Village R (Neco Arc Theme).mp3" id="4_xow3p"]
-[ext_resource type="AudioStream" uid="uid://8lobe184yxtl" path="res://jhin 4.mp3" id="6_mqvpu"]
+[ext_resource type="Texture2D" uid="uid://unyjg0a6ljww" path="res://themes/neco/Neco-Arc_Remake.png" id="2_miomt"]
+[ext_resource type="AudioStream" uid="uid://ox7gsa6cbsnl" path="res://themes/neco/neco-arc-sound-effect.mp3" id="4_bi544"]
+[ext_resource type="AudioStream" uid="uid://8lobe184yxtl" path="res://common/jhin 4.mp3" id="6_mqvpu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_cc7qd"]
 size = Vector2(500, 900)
@@ -78,11 +77,6 @@ offset_right = 237.0
 offset_bottom = 619.0
 text = "Coins: 0"
 label_settings = SubResource("LabelSettings_3cn85")
-
-[node name="bgm" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("4_xow3p")
-autoplay = true
-bus = &"Music"
 
 [node name="neco" type="Node" parent="."]
 

@@ -15,12 +15,13 @@ run/main_scene="res://menu.tscn"
 config/use_custom_user_dir=true
 config/custom_user_dir_name="Kravchuk Gaming/Neco-Clicker"
 config/features=PackedStringArray("4.2", "GL Compatibility")
-config/icon="res://Neco-Arc.png"
+config/icon="res://themes/neco/Neco-Arc.png"
 config/windows_native_icon="res://icon.ico"
 
 [autoload]
 
-Save="*res://save.gd"
+themes="*res://themes.tscn"
+Save="*res://save.tscn"
 
 [display]
 
